@@ -3,32 +3,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EncryptController">
-   <children>
-      <Button fx:id="BackToMenuButton" layoutX="475.0" layoutY="541.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="31.0" prefWidth="90.0" text="Back" />
-      <MenuBar prefHeight="26.0" prefWidth="600.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem fx:id="OpenFileMenuItem" mnemonicParsing="false" onAction="#openFileAction" text="Read File" />
-                  <MenuItem fx:id="SaveFileMenuItem" mnemonicParsing="false" onAction="#saveFileAction" text="Save" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Encrypt">
-            <items>
-                  <RadioMenuItem fx:id="vigener" mnemonicParsing="false" selected="true" text="Vigenere">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="EncryptGroup" />
-                     </toggleGroup></RadioMenuItem>
-                  <RadioMenuItem fx:id="pleupher" mnemonicParsing="false" text="Pleupher" toggleGroup="$EncryptGroup" />
-                  <RadioMenuItem fx:id="rail" mnemonicParsing="false" text="Rail" toggleGroup="$EncryptGroup" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <TextArea fx:id="TextArea" layoutX="14.0" layoutY="50.0" prefHeight="266.0" prefWidth="572.0" />
-      <Button fx:id="EncryptButton" layoutX="188.0" layoutY="336.0" mnemonicParsing="false" onAction="#encryptText" prefHeight="31.0" prefWidth="124.0" text="Encrypt" />
-      <Button fx:id="DecryptButton" layoutX="420.0" layoutY="336.0" mnemonicParsing="false" onAction="#decryptText" prefHeight="31.0" prefWidth="110.0" text="Decrypt" />
-      <TextField fx:id="KeyInput" layoutX="14.0" layoutY="339.0" promptText="Input key" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EncryptController">
+    <Button fx:id="BackToMenuButton" layoutX="475.0" layoutY="541.0" mnemonicParsing="false" onAction="#backToMenu"
+            prefHeight="31.0" prefWidth="90.0" text="Back"/>
+    <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="OpenFileMenuItem" mnemonicParsing="false" onAction="#openFileAction"
+                      text="Read File"/>
+            <MenuItem fx:id="SaveFileMenuItem" mnemonicParsing="false" onAction="#saveFileAction" text="Save"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Encrypt">
+            <RadioMenuItem fx:id="vigener" mnemonicParsing="false" selected="true" text="Vigenere">
+                <toggleGroup>
+                    <ToggleGroup fx:id="EncryptGroup"/>
+                </toggleGroup>
+            </RadioMenuItem>
+            <RadioMenuItem fx:id="pleupher" mnemonicParsing="false" text="Pleupher"
+                           toggleGroup="$EncryptGroup"/>
+            <RadioMenuItem fx:id="rail" mnemonicParsing="false" text="Rail" toggleGroup="$EncryptGroup"/>
+        </Menu>
+    </MenuBar>
+    <TextArea fx:id="TextArea" layoutX="14.0" layoutY="50.0" prefHeight="266.0" prefWidth="572.0"/>
+    <Button fx:id="EncryptButton" layoutX="188.0" layoutY="336.0" mnemonicParsing="false" onAction="#encryptText"
+            prefHeight="31.0" prefWidth="124.0" text="Encrypt"/>
+    <Button fx:id="DecryptButton" layoutX="420.0" layoutY="336.0" mnemonicParsing="false" onAction="#decryptText"
+            prefHeight="31.0" prefWidth="110.0" text="Decrypt"/>
+    <TextField fx:id="KeyInput" layoutX="14.0" layoutY="339.0" promptText="Input key"/>
 </AnchorPane>

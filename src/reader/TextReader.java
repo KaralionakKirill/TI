@@ -1,9 +1,6 @@
 package reader;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.stream.Collectors;
 
 
@@ -19,5 +16,15 @@ public class TextReader {
             e.printStackTrace();
         }
         return text;
+    }
+
+    public static byte[] readFile(File file){
+        byte[] fileBytes = new byte[0];
+        try (InputStream inputStream = new FileInputStream(file)) {
+            fileBytes = inputStream.readAllBytes();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileBytes;
     }
 }

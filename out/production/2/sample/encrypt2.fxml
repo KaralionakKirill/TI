@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Encrypt2Controller">
+    <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="OpenFileMenuItem" mnemonicParsing="false" onAction="#openFileAction" text="Read File" />
+         <MenuItem fx:id="SaveToFile" mnemonicParsing="false" onAction="#saveToFile" text="Save" />
+        </Menu>
+    </MenuBar>
+    <Button fx:id="BackToMenuButton" layoutX="479.0" layoutY="543.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="35.0" prefWidth="90.0" text="Back" />
+    <TextField fx:id="KeyInput" layoutX="27.0" layoutY="47.0" prefHeight="26.0" prefWidth="545.0" promptText="Input key" />
+    <TextArea fx:id="Key" layoutX="26.0" layoutY="87.0" prefHeight="114.0" prefWidth="546.0" />
+    <TextArea fx:id="Result" layoutX="26.0" layoutY="341.0" prefHeight="114.0" prefWidth="546.0" />
+   <Button fx:id="EncryptButton" layoutX="27.0" layoutY="467.0" mnemonicParsing="false" onAction="#onEncryptButtonClick" prefHeight="35.0" prefWidth="206.0" text="Encrypt" />
+   <Button fx:id="DecryptButton" layoutX="362.0" layoutY="467.0" mnemonicParsing="false" onAction="#onDecryptButtonClick" prefHeight="35.0" prefWidth="206.0" text="Decrypt" />
+   <TextArea fx:id="Input" layoutX="27.0" layoutY="214.0" prefHeight="113.0" prefWidth="546.0" />
+</AnchorPane>

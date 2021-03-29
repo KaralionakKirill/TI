@@ -104,6 +104,7 @@ public class EncryptController {
 
     public void saveFileAction() {
         String fileName = UUID.randomUUID().toString();
+        fileName = fileName +".txt";
         try (FileWriter fileWriter = new FileWriter(fileName)) {
             fileWriter.write(TextArea.getText());
         } catch (IOException e) {

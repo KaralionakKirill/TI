@@ -16,14 +16,9 @@ public class EncryptionService {
         };
     }
 
-    private static boolean isRus(char c) {
-        return c >= 'а' && c <= 'я' || c >= 'А' && c <= 'Я';
-    }
-
     private static boolean isEng(char c) {
         return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
     }
-
 
     public static String decryptText(String plaintext, String key, int encryptionMethod) throws Exception {
         return switch (encryptionMethod) {
